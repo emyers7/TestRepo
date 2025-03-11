@@ -8,9 +8,5 @@ document.getElementById('auth-form').addEventListener('submit', function(event) 
     const password = document.getElementById('password').value;
     if (email && password) {
         document.getElementById('message').textContent = 'A validation email has been sent.';
-        // Simulate email validation logic here
-        setTimeout(() => {
-            window.location.href = 'subscription.html';
-        }, 2000);
     }
 });
