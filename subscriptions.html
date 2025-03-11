@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MailScrape Subscriptions</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <!-- Gradient Background -->
+    <div class="background-gradient"></div>
+
+    <!-- Header with Hamburger Menu -->
+    <header>
+        <button id="menu-toggle">&#9776;</button>
+        <h1>MailScrape Subscriptions</h1>
+    </header>
+
+    <!-- Sidebar (Hamburger Menu) -->
+    <nav id="sidebar" class="hidden">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="subscriptions.html">Subscriptions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="subscriptions-container">
+        <h2>Select Your Subscription Plan</h2>
+
+        <div class="subscription-options">
+            <!-- Basic Plan -->
+            <div class="plan">
+                <h3>Basic Plan</h3>
+                <p><strong>$9.99/month</strong> or <strong>$14.99/year</strong></p>
+                <p>✅ 1 Account</p>
+                <p>✅ Standard Phishing Protection</p>
+                <p>✅ Email Link Scanning</p>
+                <button onclick="selectPlan('Basic Plan')">Select Plan</button>
+            </div>
+
+            <!-- Family Plan -->
+            <div class="plan">
+                <h3>Family Plan</h3>
+                <p><strong>$24.99/month</strong> or <strong>$249.99/year</strong></p>
+                <p>✅ Up to 3 Accounts</p>
+                <p>✅ Enhanced Phishing Protection</p>
+                <p>✅ Email & Attachment Scanning</p>
+                <button onclick="selectPlan('Family Plan')">Select Plan</button>
+            </div>
+
+            <!-- Business Plan -->
+            <div class="plan">
+                <h3>Business Plan</h3>
+                <p><strong>$49.99/month</strong> or <strong>$199.99/year</strong></p>
+                <p>✅ Up to 10 Accounts</p>
+                <p>✅ Advanced AI-Based Phishing Detection</p>
+                <p>✅ 24/7 Customer Support</p>
+                <button onclick="selectPlan('Business Plan')">Select Plan</button>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="plan">
+                <h3>Enterprise Plan</h3>
+                <p><strong>$99.99/month</strong> or <strong>$299.99/year</strong></p>
+                <p>✅ Unlimited Accounts</p>
+                <p>✅ AI-Based Threat Analysis</p>
+                <p>✅ Dedicated Support & Custom Integrations</p>
+                <button onclick="selectPlan('Enterprise Plan')">Select Plan</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
