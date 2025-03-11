@@ -3,38 +3,66 @@ document.getElementById('menu-toggle').addEventListener('click', function() {
     document.getElementById('sidebar').classList.toggle('active');
 });
 
-// Form submission for authentication (from index.html login)
-const authForm = document.getElementById('auth-form');
-if (authForm) {
-    authForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-        if (email && password) {
-            document.getElementById('message').textContent = 'A validation email has been sent.';
-            setTimeout(() => {
-                window.location.href = 'subscription.html';
-            }, 2000);
-        }
-    });
-}
+// Update Account Information
+document.getElementById('account-form').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-// Subscription management actions (only available on account.html)
+    // Get user input values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const securityQuestion = document.getElementById('security-question').value;
+    const securityAnswer = document.getElementById('security-answer').value;
+
+    // Validate inputs
+    if (!name || !email || !phone || !securityAnswer) {
+        alert('Please fill out all fields before updating your account.');
+        return;
+    }
+
+    // Display success message
+    alert(`Your account information has been updated successfully!
+    \nName: ${name}
+    \nEmail: ${email}
+    \nPhone: ${phone}
+    \nSecurity Question: ${securityQuestion}
+    \nAnswer: ${securityAnswer}`);
+});
+
+// Change Password
+document.getElementById('password-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Get password values
+    const currentPassword = document.getElementById('current-password').value;
+    const newPassword = document.getElementById('new-password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+
+    // Check if passwords match
+    if (newPassword !== confirmPassword) {
+        alert('New passwords do not match. Please try again.');
+        return;
+    }
+
+    // Validate inputs
+    if (!currentPassword || !newPassword || !confirmPassword) {
+        alert('Please fill out all password fields before updating.');
+        return;
+    }
+
+    // Display success message
+    alert('Your password has been updated successfully!');
+});
+
+// Cancel Subscription Confirmation
 const cancelButton = document.querySelector('.cancel-subscription');
 if (cancelButton) {
     cancelButton.addEventListener('click', function() {
         const confirmCancel = confirm('Are you sure you want to cancel your subscription?');
+
         if (confirmCancel) {
             alert('Your subscription has been canceled.');
-            // You could add logic here to update the backend if needed.
+            // In a real-world app, this would trigger a request to the server to cancel the subscription.
         }
-    });
-}
-
-const updateButton = document.querySelector('.update-info');
-if (updateButton) {
-    updateButton.addEventListener('click', function() {
-        alert('Redirecting to update account information.');
-        // Redirect or open a form for user to update their details.
     });
 }
