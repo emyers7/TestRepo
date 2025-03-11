@@ -115,6 +115,38 @@ input, select, button {
     border-radius: 5px;
 }
 
+/* Center the text for the About page */
+.about, .features, .functionality, .pricing {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto; /* Centers content */
+    padding: 20px;
+}
+
+/* Fix header spacing inside the sections */
+.about h2, .features h2, .functionality h2, .pricing h2 {
+    margin-bottom: 10px; /* Adds space below headers */
+    font-size: 24px; /* Makes headers more readable */
+}
+
+/* Ensure paragraphs have proper spacing */
+.about p, .features p, .functionality p, .pricing p {
+    font-size: 18px;
+    line-height: 1.6; /* Improves readability */
+    margin-bottom: 15px; /* Adds spacing below each paragraph */
+}
+
+/* Adjust list items for better readability */
+.features ul {
+    list-style-type: none; /* Removes default bullets */
+    padding: 0;
+}
+
+.features ul li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
 /* Buttons */
 button {
     display: block;
