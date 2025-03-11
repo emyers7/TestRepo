@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Subscription - MailScrape</title>
+    <title>My Account - MailScrape</title>
     <link rel="stylesheet" href="css/styles.css">
     <script defer src="js/script.js"></script>
 </head>
@@ -22,7 +22,7 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="account.html">My Subscription</a></li>
+            <li><a href="account.html">My Account</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="logout.html">Logout</a></li>
         </ul>
@@ -32,10 +32,23 @@
     <main class="account-container">
         <section class="account-info">
             <h2>Account Information</h2>
-            <div class="info-group">
-                <p><strong>Name:</strong> John Doe</p>
-                <p><strong>Email:</strong> johndoe@example.com</p>
-            </div>
+            <form id="account-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" value="johndoe@example.com" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" placeholder="Enter phone number" required>
+
+                <label for="security-question">Security Question:</label>
+                <select id="security-question">
+                    <option value="pet">What was the name of your first pet?</option>
+                    <option value="mother">What is your mother’s maiden name?</option>
+                    <option value="city">In what city were you born?</option>
+                </select>
+                <input type="text" id="security-answer" placeholder="Enter your answer" required>
+
+                <button type="submit" class="update-info">Update Information</button>
+            </form>
         </section>
 
         <section class="subscription-details">
@@ -46,12 +59,23 @@
                 <p><strong>Renewal Date:</strong> March 10, 2026</p>
                 <p><strong>Price:</strong> $15 per year</p>
             </div>
+            <button class="cancel-subscription">Cancel Subscription</button>
         </section>
 
-        <section class="actions">
-            <h2>Manage Subscription</h2>
-            <button class="cancel-subscription">Cancel Subscription</button>
-            <button class="update-info">Update Account Info</button>
+        <section class="password-change">
+            <h2>Change Password</h2>
+            <form id="password-form">
+                <label for="current-password">Current Password:</label>
+                <input type="password" id="current-password" required>
+
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" required>
+
+                <label for="confirm-password">Confirm New Password:</label>
+                <input type="password" id="confirm-password" required>
+
+                <button type="submit" class="update-password">Update Password</button>
+            </form>
         </section>
     </main>
 </body>
