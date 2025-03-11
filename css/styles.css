@@ -22,17 +22,17 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Centers the title */
     padding: 10px;
     background-color: #333;
     color: white;
     position: relative;
 }
 
-/* Hamburger Menu on the Left */
+/* Move the hamburger menu to the left */
 #menu-toggle {
     position: absolute;
-    left: 10px;
+    left: 10px; /* Positions it on the left */
     background: none;
     border: none;
     color: white;
