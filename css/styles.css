@@ -1,21 +1,20 @@
-/* General Reset */
+/* General reset */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    position: relative;
-    overflow-x: hidden; /* Prevents horizontal scroll */
+    position: relative; /* Ensure the gradient covers the entire screen */
 }
 
-/* Gradient Background */
+/* Background Gradient */
 .background-gradient {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
     background: linear-gradient(to bottom, yellow, purple, blue);
-    z-index: -1;
+    z-index: -1; /* Behind all content */
 }
 
 /* Header */
@@ -39,14 +38,13 @@ header {
 /* Sidebar (Hamburger Menu) */
 #sidebar {
     position: fixed;
+    left: -250px; /* Hidden off-screen initially */
     top: 0;
-    left: -250px; /* Hidden off-screen by default */
     width: 250px;
     height: 100vh;
     background-color: #222;
     padding-top: 20px;
     transition: left 0.3s ease;
-    z-index: 1000;
 }
 
 #sidebar ul {
@@ -63,25 +61,18 @@ header {
     text-decoration: none;
 }
 
-/* Show the sidebar when 'active' class is added */
-#sidebar.active {
-    left: 0;
+#sidebar.hidden {
+    left: 0; /* Slide in from the left when active */
 }
 
-/* Main Content */
+/* Main content */
 main {
     padding: 20px;
-    position: relative;
-    z-index: 1;
-    background-color: white;
-    max-width: 600px;
-    margin: 50px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Login/Signup Form */
+/* Login/Signup Section */
 #login-signup {
+    margin: 50px auto;
     text-align: center;
 }
 
@@ -98,13 +89,44 @@ input, button {
     font-size: 16px;
 }
 
-/* Mobile Responsiveness */
+/* Navigation Bar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    z-index: 1000; /* To keep it on top */
+}
+
+/* Navigation links */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* When hovered, change background color */
+.navbar a:hover {
+    background-color: #575757;
+}
+
+/* Mobile view: stack buttons vertically */
 @media (max-width: 768px) {
-    #menu-toggle {
-        display: block;
+    .navbar {
+        flex-direction: column;
+        height: auto;
     }
 
-    #sidebar ul li {
+    .navbar a {
+        padding: 10px 20px;
+        width: 100%;
         text-align: center;
     }
 }
