@@ -80,22 +80,51 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Login/Signup Form */
-#login-signup {
+/* Account Page Styling */
+.account-container {
+    padding: 20px;
+}
+
+.account-info, .subscription-details, .actions {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
     text-align: center;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 300px;
-    margin: auto;
+.info-group {
+    padding: 10px;
+    font-size: 18px;
 }
 
-input, button {
+.actions {
+    text-align: center;
+}
+
+button {
+    display: block;
+    width: 100%;
     padding: 10px;
+    margin-top: 10px;
     font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cancel-subscription {
+    background-color: red;
+    color: white;
+}
+
+.update-info {
+    background-color: #007bff;
+    color: white;
 }
 
 /* Mobile Responsiveness */
@@ -106,5 +135,9 @@ input, button {
 
     #sidebar ul li {
         text-align: center;
+    }
+
+    main {
+        width: 90%;
     }
 }
