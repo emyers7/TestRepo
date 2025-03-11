@@ -65,4 +65,9 @@ if (cancelButton) {
             // In a real-world app, this would trigger a request to the server to cancel the subscription.
         }
     });
+
+// Function to handle plan selection
+function selectPlan(planName) {
+    alert(`You selected the ${planName}. Redirecting to checkout...`);
+    window.location.href = "checkout.html"; // This page will be created later
 }
