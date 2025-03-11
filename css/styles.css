@@ -61,8 +61,9 @@ header {
     text-decoration: none;
 }
 
-#sidebar.hidden {
-    left: 0; /* Slide in from the left when active */
+/* When the menu is toggled, show the sidebar */
+#sidebar.active {
+    left: 0; /* Slide in from the left */
 }
 
 /* Main content */
