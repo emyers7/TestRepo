@@ -1,98 +1,72 @@
-/* General reset */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    position: relative; /* Ensure the gradient covers the entire screen */
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
 }
 
-/* Background Gradient */
-.background-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, yellow, purple, blue);
-    z-index: -1; /* Behind all content */
-}
-
-/* Header */
 header {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: #333;
+        color: white;
 }
 
 #menu-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    margin-right: 10px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        margin-right: 10px;
 }
 
-/* Sidebar (Hamburger Menu) */
 #sidebar {
-    position: fixed;
-    left: -250px; /* Hidden off-screen initially */
-    top: 0;
-    width: 250px;
-    height: 100vh;
-    background-color: #222;
-    padding-top: 20px;
-    transition: left 0.3s ease;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        background-color: #222;
+        padding-top: 20px;
+        display: block;
 }
 
-#sidebar ul {
-    list-style: none;
-    padding: 0;
+.hidden {
+        display: none;
 }
 
-#sidebar ul li {
-    padding: 10px;
+nav ul {
+        list-style: none;
+        padding: 0;
 }
 
-#sidebar ul li a {
-    color: white;
-    text-decoration: none;
+nav ul li {
+        padding: 10px;
 }
 
-#sidebar.hidden {
-    left: 0; /* Slide in from the left when active */
+nav ul li a {
+        color: white;
+        text-decoration: none;
 }
 
-/* Main content */
-main {
-    padding: 20px;
-}
-
-/* Login/Signup Section */
 #login-signup {
-    margin: 50px auto;
-    text-align: center;
+        margin: 50px auto;
+        text-align: center;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 300px;
-    margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 300px;
+        margin: auto;
 }
 
 input, button {
-    padding: 10px;
-    font-size: 16px;
+        padding: 10px;
+        font-size: 16px;
+        
 }
 
-/* Responsive design for mobile */
-@media (max-width: 768px) {
-    /* Style for the hamburger menu */
-    #menu-toggle {
-        display: block;
-    }
-}
+</style>
