@@ -32,7 +32,7 @@ header {
 /* Move the hamburger menu to the left */
 #menu-toggle {
     position: absolute;
-    left: 10px; /* Positions it on the left */
+    left: 50px; /* Positions it on the left */
     background: none;
     border: none;
     color: white;
