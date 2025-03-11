@@ -13,7 +13,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: red;
+    background: linear-gradient(to bottom, yellow, purple, blue);
     z-index: -1; /* Behind all content */
 }
 
@@ -61,9 +61,8 @@ header {
     text-decoration: none;
 }
 
-/* When the menu is toggled, show the sidebar */
-#sidebar.active {
-    left: 0; /* Slide in from the left */
+#sidebar.hidden {
+    left: 0; /* Slide in from the left when active */
 }
 
 /* Main content */
@@ -90,44 +89,10 @@ input, button {
     font-size: 16px;
 }
 
-/* Navigation Bar Styles */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    z-index: 1000; /* To keep it on top */
-}
-
-/* Navigation links */
-.navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 14px 20px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-/* When hovered, change background color */
-.navbar a:hover {
-    background-color: #575757;
-}
-
-/* Mobile view: stack buttons vertically */
+/* Responsive design for mobile */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .navbar a {
-        padding: 10px 20px;
-        width: 100%;
-        text-align: center;
+    /* Style for the hamburger menu */
+    #menu-toggle {
+        display: block;
     }
 }
