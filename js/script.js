@@ -1,5 +1,4 @@
-<script>
-  document.getElementById('menu-toggle').addEventListener('click', function() {
+document.getElementById('menu-toggle').addEventListener('click', function() {
     document.getElementById('sidebar').classList.toggle('hidden');
   });
 
@@ -15,4 +14,3 @@
       }, 2000);
     }
   });
-</script>
