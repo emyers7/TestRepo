@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Subscription - MailScrape</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <!-- Gradient Background -->
+    <div class="background-gradient"></div>
+
+    <!-- Header with Hamburger Menu -->
+    <header>
+        <button id="menu-toggle">&#9776;</button>
+        <h1>My Account</h1>
+    </header>
+
+    <!-- Sidebar (Hamburger Menu) -->
+    <nav id="sidebar" class="hidden">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="account.html">My Subscription</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="account-container">
+        <section class="account-info">
+            <h2>Account Information</h2>
+            <div class="info-group">
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Email:</strong> johndoe@example.com</p>
+            </div>
+        </section>
+
+        <section class="subscription-details">
+            <h2>Subscription Details</h2>
+            <div class="info-group">
+                <p><strong>Status:</strong> Active</p>
+                <p><strong>Plan:</strong> Yearly Subscription</p>
+                <p><strong>Renewal Date:</strong> March 10, 2026</p>
+                <p><strong>Price:</strong> $15 per year</p>
+            </div>
+        </section>
+
+        <section class="actions">
+            <h2>Manage Subscription</h2>
+            <button class="cancel-subscription">Cancel Subscription</button>
+            <button class="update-info">Update Account Info</button>
+        </section>
+    </main>
+</body>
+</html>
