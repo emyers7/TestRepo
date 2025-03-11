@@ -97,3 +97,14 @@ input, button {
     padding: 10px;
     font-size: 16px;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    #sidebar ul li {
+        text-align: center;
+    }
+}
