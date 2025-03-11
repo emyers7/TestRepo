@@ -1,5 +1,5 @@
 document.getElementById('menu-toggle').addEventListener('click', function() {
-    document.getElementById('sidebar').classList.toggle('active'); // Toggle the sidebar visibility
+    document.getElementById('sidebar').classList.toggle('hidden');
 });
 
 document.getElementById('auth-form').addEventListener('submit', function(event) {
