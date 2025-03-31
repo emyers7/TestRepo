@@ -22,16 +22,31 @@ body {
     z-index: -1;
 }
 
-/* Header */
+/* Wrapper for Hamburger Menu */
+#hamburger-wrapper {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+}
+
+/* Hamburger Button */
+#menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Adjust Header Styling if Needed */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
+    text-align: center;
+    padding: 20px 10px;
     background-color: #333;
     color: white;
-    position: relative;
     z-index: 1000;
+    position: relative;
 }
 
 /* Hamburger Menu Button */
