@@ -63,11 +63,11 @@ header {
     z-index: 1001;
 }
 
-/* Sidebar (Hamburger Menu) */
+/* Sidebar (Hamburger Menu Panel) */
 #sidebar {
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -250px; /* Start off-screen */
     width: 250px;
     height: 100vh;
     background-color: #222;
@@ -76,6 +76,12 @@ header {
     z-index: 1000;
 }
 
+/* This class makes it slide into view */
+#sidebar.active {
+    left: 0;
+}
+
+/* Keep list styling clean */
 #sidebar ul {
     list-style: none;
     padding: 0;
@@ -89,7 +95,6 @@ header {
     color: white;
     text-decoration: none;
 }
-
 /* Show the sidebar when 'active' class is added */
 #sidebar.active {
     left: 0;
