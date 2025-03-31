@@ -22,22 +22,26 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centers the title */
+    justify-content: center;
+    position: relative;
     padding: 10px;
     background-color: #333;
     color: white;
-    position: relative;
+    z-index: 1001; /* Ensures it’s above everything else */
 }
 
-/* Move the hamburger menu to the left */
+/* Hamburger Menu on the Left */
 #menu-toggle {
     position: absolute;
-    left: 50px; /* Positions it on the left */
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the button */
     background: none;
     border: none;
     color: white;
     font-size: 24px;
     cursor: pointer;
+    z-index: 1002; /* Keep it above the title */
 }
 
 /* Sidebar (Hamburger Menu) */
