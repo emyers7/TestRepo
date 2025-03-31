@@ -22,6 +22,10 @@ body {
     z-index: -1;
 }
 
+.hidden {
+    display: none !important;
+}
+
 /* Wrapper for Hamburger Menu */
 #hamburger-wrapper {
     position: fixed;
