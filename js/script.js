@@ -1,8 +1,6 @@
 // Toggle the sidebar (Hamburger Menu)
-document.getElementById('menu-toggle').addEventListener('click', function () {
-    const sidebar = document.getElementById('sidebar');
-    sidebar.classList.toggle('active');   // Show sidebar
-    sidebar.classList.remove('hidden');   // Just in case 'hidden' was applied
+document.getElementById('menu-toggle').addEventListener('click', function() {
+     document.getElementById('sidebar').classList.toggle('active');
 });
 
 // Update Account Information
