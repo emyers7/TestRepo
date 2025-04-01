@@ -264,3 +264,57 @@ button {
         width: 90%;
     }
 }
+
+/* Payment Options */
+.payment-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.payment-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.payment-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Credit/Debit Card Form */
+.card-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-form label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+.card-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Hide/show class */
+.hidden {
+    display: none !important;
+}
