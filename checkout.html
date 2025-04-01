@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout - MailScraper</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <!-- Gradient Background -->
+  <div class="background-gradient"></div>
+
+  <!-- Hamburger Menu Button -->
+  <div id="hamburger-wrapper">
+    <button id="menu-toggle">&#9776;</button>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Checkout</h1>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <nav id="sidebar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="subscriptions.html">Subscriptions</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="logout.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="subscriptions-container">
+    <h2>Select Your Payment Method</h2>
+
+    <div class="payment-options">
+      <button class="payment-btn">PayPal</button>
+      <button class="payment-btn" id="card-toggle">Debit / Credit Card</button>
+      <button class="payment-btn">Google Pay</button>
+      <button class="payment-btn">Apple Pay</button>
+    </div>
+
+    <!-- Credit/Debit Card Form -->
+    <div id="card-form" class="card-form hidden">
+      <form>
+        <label for="card-name">Name on Card:</label>
+        <input type="text" id="card-name" placeholder="John Doe" required>
+
+        <label for="card-number">Card Number:</label>
+        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+
+        <label for="expiry">Expiration Date:</label>
+        <input type="text" id="expiry" placeholder="MM/YY" required>
+
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" placeholder="123" required>
+
+        <button type="submit" class="update-info">Submit Payment</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
