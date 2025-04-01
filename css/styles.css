@@ -67,18 +67,18 @@ header {
 #sidebar {
     position: fixed;
     top: 0;
-    left: -250px; /* Start off-screen */
+    left: -250px; /* Hide off-screen by default */
     width: 250px;
     height: 100vh;
     background-color: #222;
     padding-top: 20px;
-    transition: left 0.3s ease;
+    transition: left 0.3s ease; /* Slide animation */
     z-index: 1000;
 }
 
 /* This class makes it slide into view */
 #sidebar.active {
-    left: 0;
+    left: 0; /* Slide in from the left */
 }
 
 /* Keep list styling clean */
