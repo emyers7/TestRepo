@@ -72,3 +72,13 @@ function selectPlan(planName) {
     alert(`You selected the ${planName}. Redirecting to checkout...`);
     window.location.href = "checkout.html";
 }
+
+// Toggle card payment form
+const cardToggle = document.getElementById('card-toggle');
+const cardForm = document.getElementById('card-form');
+
+if (cardToggle && cardForm) {
+    cardToggle.addEventListener('click', () => {
+        cardForm.classList.toggle('hidden');
+    });
+}
