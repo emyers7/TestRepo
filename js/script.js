@@ -73,7 +73,7 @@ function selectPlan(planName) {
     window.location.href = "checkout.html";
 }
 
-// Toggle card payment form
+// Toggle the credit/debit card form
 const cardToggle = document.getElementById('card-toggle');
 const cardForm = document.getElementById('card-form');
 
