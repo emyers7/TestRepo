@@ -8,20 +8,17 @@
   <script defer src="js/script.js"></script>
 </head>
 <body>
-  <!-- Gradient Background -->
   <div class="background-gradient"></div>
 
-  <!-- Hamburger Menu Button -->
+  <!-- Hamburger Menu -->
   <div id="hamburger-wrapper">
     <button id="menu-toggle">&#9776;</button>
   </div>
 
-  <!-- Header -->
   <header>
     <h1>Checkout</h1>
   </header>
 
-  <!-- Sidebar Navigation -->
   <nav id="sidebar">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -32,15 +29,14 @@
     </ul>
   </nav>
 
-  <!-- Main Content -->
   <main class="subscriptions-container">
     <h2>Select Your Payment Method</h2>
 
     <div class="payment-options">
-      <button class="payment-btn">PayPal</button>
+      <button class="payment-btn" onclick="window.location.href='https://www.paypal.com'">PayPal</button>
       <button class="payment-btn" id="card-toggle">Debit / Credit Card</button>
-      <button class="payment-btn">Google Pay</button>
-      <button class="payment-btn">Apple Pay</button>
+      <button class="payment-btn" onclick="window.location.href='https://pay.google.com'">Google Pay</button>
+      <button class="payment-btn" onclick="window.location.href='https://www.apple.com/apple-pay/'">Apple Pay</button>
     </div>
 
     <!-- Credit/Debit Card Form -->
