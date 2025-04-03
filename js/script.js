@@ -90,3 +90,52 @@ document.querySelectorAll('.faq-question').forEach(button => {
         answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
     });
 });
+
+// Track login state after sign-up
+document.getElementById('auth-form')?.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  fetch('http://localhost:3000/signup', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password })
+  })
+    .then(res => res.text())
+    .then(message => {
+      document.getElementById('message').textContent = message;
+
+      // If signup was successful, store user state
+      if (message.includes("Signup complete")) {
+        localStorage.setItem('loggedIn', 'true');
+        localStorage.setItem('userEmail', email);
+        showLogoutButton();
+      }
+    })
+    .catch(err => {
+      document.getElementById('message').textContent = 'Something went wrong.';
+      console.error(err);
+    });
+});
+
+// Logout functionality
+function logoutUser() {
+  localStorage.removeItem('loggedIn');
+  localStorage.removeItem('userEmail');
+  window.location.href = 'index.html'; // Redirect anywhere you want
+}
+
+// Show logout button if user is logged in
+function showLogoutButton() {
+  const logoutBtn = document.getElementById('logout-btn');
+  if (localStorage.getItem('loggedIn') === 'true') {
+    logoutBtn.style.display = 'block';
+  } else {
+    logoutBtn.style.display = 'none';
+  }
+}
+
+// Call on page load
+document.addEventListener('DOMContentLoaded', showLogoutButton);
